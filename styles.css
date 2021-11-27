@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+  background-color: #5a9e4b;
+  font-size: 30px;
+  color: white;
+}
+button {
+  width: 25%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+div {
+  font-size: 45px;
+}
+h2 {
+  margin: 25px;
+}
