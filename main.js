@@ -19,7 +19,7 @@ app.HoleView = Backbone.View.extend({
     this.render();
   },
   subtract: function () {
-    if (this.model.get("hole") > 0) {
+    if (this.model.get("hole") > 1) {
       this.model.set("hole", this.model.get("hole") - 1);
     } else {
       this.model.set("hole", 18);
@@ -85,25 +85,25 @@ app.StrokesView = Backbone.View.extend({
   },
 });
 
-let hole = new app.Hole({ hole: 1 });
-let holeView = new app.HoleView({
-  el: "#hole",
-  model: hole,
-});
-
-let total = new app.Total({ total: 0 });
-let totalView = new app.TotalView({
-  el: "#total",
-  model: total,
-});
-
-let strokes = new app.Strokes({ strokes: 0 });
-let strokesView = new app.StrokesView({
-  el: "#strokes",
-  model: strokes,
-});
-
 $(document).ready(function () {
+  let hole = new app.Hole({ hole: 1 });
+  let holeView = new app.HoleView({
+    el: "#hole",
+    model: hole,
+  });
+
+  let total = new app.Total({ total: 0 });
+  let totalView = new app.TotalView({
+    el: "#total",
+    model: total,
+  });
+
+  let strokes = new app.Strokes({ strokes: 0 });
+  let strokesView = new app.StrokesView({
+    el: "#strokes",
+    model: strokes,
+  });
+
   $("#countUpHoles").click(function () {
     holeView.add();
   });
