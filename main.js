@@ -1,6 +1,6 @@
 "use strict";
 
-let app = {};
+var app = {};
 
 app.Hole = Backbone.Model.extend({});
 app.Total = Backbone.Model.extend({});
@@ -86,20 +86,20 @@ app.StrokesView = Backbone.View.extend({
 });
 
 $(document).ready(function () {
-  let hole = new app.Hole({ hole: 1 });
-  let holeView = new app.HoleView({
+  var hole = new app.Hole({ hole: 1 });
+  var holeView = new app.HoleView({
     el: "#hole",
     model: hole,
   });
 
-  let total = new app.Total({ total: 0 });
-  let totalView = new app.TotalView({
+  var total = new app.Total({ total: 0 });
+  var totalView = new app.TotalView({
     el: "#total",
     model: total,
   });
 
-  let strokes = new app.Strokes({ strokes: 0 });
-  let strokesView = new app.StrokesView({
+  var strokes = new app.Strokes({ strokes: 0 });
+  var strokesView = new app.StrokesView({
     el: "#strokes",
     model: strokes,
   });
